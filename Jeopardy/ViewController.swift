@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        showCategories()
     }
 
     @IBOutlet var categories: [UILabel]!
@@ -29,12 +28,27 @@ class ViewController: UIViewController {
         "Komodo Dragon",
         "Aorta",
         "Guanine",
-        "July"
+        "July "
     ]
-    func showCategories() {
-        for category in categories {
-            print(category.text!)
-        }
+    //    do the same for every other category/answer
+    var currentQuestion : JQuestion!
+    @IBAction func questionPressed(_ sender: UIButton) {
+        currentQuestion = JQuestion(
+            question: categoryOneQuestions[sender.tag],
+            answer: categoryOneAnswers[sender.tag],
+            points: formattedPoints(sender.currentTitle!)
+        )    
     }
+    
+    func formattedPoints(_ text : String) -> Int {
+        var myStr = ""
+        for char in text {
+            if char != "$" {
+                myStr += String(char)
+            }
+        }
+        return Int(myStr) ?? 0
+    }
+    
 }
 
