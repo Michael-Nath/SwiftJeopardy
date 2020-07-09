@@ -15,6 +15,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet var pointsDisplay: UILabel!
+    @IBOutlet var questionLabel: UILabel!
     @IBOutlet var categories: [UILabel]!
     let categoryOneQuestions = [
     "How many electrons are there in a Helium atom?",
@@ -37,9 +39,27 @@ class ViewController: UIViewController {
             question: categoryOneQuestions[sender.tag],
             answer: categoryOneAnswers[sender.tag],
             points: formattedPoints(sender.currentTitle!)
-        )    
+        )
+        showQuestion()
+
+    }
+    func showQuestion() {
+        questionLabel.text = currentQuestion.question
+        let alert = UIAlertController(title: "Answer", message: currentQuestion.question, preferredStyle: .alert)
+        alert.addTextField(configurationHandler: nil)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Submit Answer", comment: "Default action"), style: .default, handler: { _ -> Void in
+            self.verifyAnswer(alert.textFields![0].text)
+        }))
+        self.present(alert, animated:true, completion: nil)
     }
     
+    func verifyAnswer(_ answer: String?) {
+        if answer == currentQuestion.answer {
+            questionLabel.text = "Correct!"
+        } else {
+            questionLabel.text = "Incorrect!"
+        }
+    }
     func formattedPoints(_ text : String) -> Int {
         var myStr = ""
         for char in text {
