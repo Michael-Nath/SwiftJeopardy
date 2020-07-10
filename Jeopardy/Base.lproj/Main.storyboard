@@ -72,7 +72,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ws7-xW-q4R">
                                                 <rect key="frame" x="0.0" y="126" width="1366" height="123.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dga-fG-XaJ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dga-fG-XaJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="226" height="123.5"/>
                                                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="40"/>
@@ -80,7 +80,7 @@
                                                             <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="questionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D6a-U0-V0P"/>
+                                                            <action selector="questionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rRk-pq-8Ac"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wid-kX-n8T">
@@ -247,7 +247,7 @@
                                                             <action selector="questionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ygV-GG-UQK"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpl-Bq-SaR">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpl-Bq-SaR">
                                                         <rect key="frame" x="684" y="0.0" width="226" height="123.5"/>
                                                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="40"/>
@@ -258,7 +258,7 @@
                                                             <action selector="questionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JKX-IQ-jo4"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIQ-pT-sff">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIQ-pT-sff">
                                                         <rect key="frame" x="912" y="0.0" width="226" height="123.5"/>
                                                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="40"/>
@@ -269,7 +269,7 @@
                                                             <action selector="questionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tdo-x1-n8I"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibi-Bb-5Ld">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibi-Bb-5Ld">
                                                         <rect key="frame" x="1140" y="0.0" width="226" height="123.5"/>
                                                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="40"/>
@@ -451,12 +451,44 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="pointsDisplay" destination="a6Z-NB-rQW" id="8UK-Q5-BhN"/>
+                        <outlet property="questionLabel" destination="cG6-LA-fB3" id="1b5-pq-sej"/>
                         <outletCollection property="categories" destination="gfl-3L-rMA" collectionClass="NSMutableArray" id="hcv-c0-9aW"/>
                         <outletCollection property="categories" destination="qBe-pn-bgr" collectionClass="NSMutableArray" id="cZN-mA-dTJ"/>
                         <outletCollection property="categories" destination="LND-cN-DPg" collectionClass="NSMutableArray" id="tEx-Uv-2xN"/>
                         <outletCollection property="categories" destination="Joh-nw-2uR" collectionClass="NSMutableArray" id="ebj-8W-Mb7"/>
                         <outletCollection property="categories" destination="bmv-hO-vCU" collectionClass="NSMutableArray" id="w3O-q2-tbe"/>
                         <outletCollection property="categories" destination="pIK-mo-naj" collectionClass="NSMutableArray" id="IPx-p9-cEq"/>
+                        <outletCollection property="gameQuestions" destination="dga-fG-XaJ" collectionClass="NSMutableArray" id="5Iv-Fw-dXN"/>
+                        <outletCollection property="gameQuestions" destination="wid-kX-n8T" collectionClass="NSMutableArray" id="dd2-Py-ew2"/>
+                        <outletCollection property="gameQuestions" destination="9Gh-CE-UKD" collectionClass="NSMutableArray" id="Yz1-af-pEc"/>
+                        <outletCollection property="gameQuestions" destination="ALt-39-8Ck" collectionClass="NSMutableArray" id="zqH-kc-oem"/>
+                        <outletCollection property="gameQuestions" destination="Kuk-Cb-BYj" collectionClass="NSMutableArray" id="aKG-b5-LgO"/>
+                        <outletCollection property="gameQuestions" destination="fb6-h5-p3n" collectionClass="NSMutableArray" id="sML-1I-Xic"/>
+                        <outletCollection property="gameQuestions" destination="CPI-AS-Kah" collectionClass="NSMutableArray" id="8vu-e9-BVg"/>
+                        <outletCollection property="gameQuestions" destination="Gbd-1L-eeq" collectionClass="NSMutableArray" id="hO2-X9-eXZ"/>
+                        <outletCollection property="gameQuestions" destination="WN8-qI-MP9" collectionClass="NSMutableArray" id="wQG-fI-vsQ"/>
+                        <outletCollection property="gameQuestions" destination="EqU-h5-6pS" collectionClass="NSMutableArray" id="2mY-5k-fjO"/>
+                        <outletCollection property="gameQuestions" destination="yZt-1A-qeq" collectionClass="NSMutableArray" id="eIn-fC-Mqm"/>
+                        <outletCollection property="gameQuestions" destination="QcI-dD-30W" collectionClass="NSMutableArray" id="HH5-DG-qY4"/>
+                        <outletCollection property="gameQuestions" destination="QWl-1r-rdD" collectionClass="NSMutableArray" id="b1b-lg-HKZ"/>
+                        <outletCollection property="gameQuestions" destination="uGe-Ba-lIb" collectionClass="NSMutableArray" id="dKW-40-Rin"/>
+                        <outletCollection property="gameQuestions" destination="2xh-Rg-cmc" collectionClass="NSMutableArray" id="soL-5E-vh1"/>
+                        <outletCollection property="gameQuestions" destination="Qpl-Bq-SaR" collectionClass="NSMutableArray" id="UQG-Qk-IYp"/>
+                        <outletCollection property="gameQuestions" destination="iIQ-pT-sff" collectionClass="NSMutableArray" id="15w-mh-bbI"/>
+                        <outletCollection property="gameQuestions" destination="ibi-Bb-5Ld" collectionClass="NSMutableArray" id="WG6-dj-z7p"/>
+                        <outletCollection property="gameQuestions" destination="dfG-dF-Ntf" collectionClass="NSMutableArray" id="LHG-UN-c5l"/>
+                        <outletCollection property="gameQuestions" destination="BqX-R4-wUk" collectionClass="NSMutableArray" id="vqN-HD-dBi"/>
+                        <outletCollection property="gameQuestions" destination="8mw-x1-plf" collectionClass="NSMutableArray" id="jQv-t6-He3"/>
+                        <outletCollection property="gameQuestions" destination="RV6-E3-mCj" collectionClass="NSMutableArray" id="NzR-oh-fom"/>
+                        <outletCollection property="gameQuestions" destination="6iV-Dc-jil" collectionClass="NSMutableArray" id="bWF-PY-XhI"/>
+                        <outletCollection property="gameQuestions" destination="fto-dT-jsA" collectionClass="NSMutableArray" id="2XG-aJ-i7v"/>
+                        <outletCollection property="gameQuestions" destination="LjR-Aj-gqk" collectionClass="NSMutableArray" id="V9d-U1-nng"/>
+                        <outletCollection property="gameQuestions" destination="abP-zG-Erg" collectionClass="NSMutableArray" id="jIS-Gi-MtP"/>
+                        <outletCollection property="gameQuestions" destination="XMX-Ia-Ruh" collectionClass="NSMutableArray" id="7qR-gW-bN6"/>
+                        <outletCollection property="gameQuestions" destination="O0Z-CL-Tv7" collectionClass="NSMutableArray" id="do7-g2-IGI"/>
+                        <outletCollection property="gameQuestions" destination="9R3-sN-Hom" collectionClass="NSMutableArray" id="WtV-6R-EUw"/>
+                        <outletCollection property="gameQuestions" destination="wlu-ic-jer" collectionClass="NSMutableArray" id="b3E-ae-c8K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
